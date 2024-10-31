@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Scanning Deployment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #deployButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #deployButton:hover {
+            background-color: #45a049;
+        }
+        #status {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AI Internet Officer & AI Digital Court</h1>
+    <p>Click the button below to deploy the AI systems to scan the Internet for illegal content.</p>
+    <button id="deployButton" onclick="deployAI()">Deploy AI</button>
+
+    <div id="status"></div>
+
+    <script>
+        function deployAI() {
+            const statusElement = document.getElementById('status');
+            statusElement.innerText = "Deploying AI systems to scan the Internet...";
+            
+            // Simulate deployment delay
+            setTimeout(() => {
+                statusElement.innerText = "AI systems have completed scanning.";
+                
+                // Initiate investigations after scanning
+                setTimeout(() => {
+                    statusElement.innerText = "Initiating Investigations...";
+                }, 2000); // Delay for initiating investigations
+            }, 3000); // Delay for scanning
+        }
+    </script>
+
+</body>
+</html>
